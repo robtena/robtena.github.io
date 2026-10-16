@@ -252,36 +252,86 @@ p {
   color: #5e801e;
 }
 
-.hero-photo {
+.hero-art {
   position: relative;
-  width: min(100%, 350px);
-  aspect-ratio: 0.82;
+  display: grid;
+  width: min(100%, 390px);
+  aspect-ratio: 1;
   justify-self: end;
+  place-items: center;
   overflow: hidden;
-  border: 5px solid var(--paper);
-  border-radius: 48% 48% 5px 48%;
+  border-radius: 50%;
   background: #e9eddf;
-  box-shadow: 12px 12px 0 var(--green);
 }
 
-.hero-photo img {
+.art-sun {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 38%;
+  top: 18%;
+  right: 16%;
+  width: 23%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--green);
 }
 
-.hero-photo figcaption {
+.art-orbit {
   position: absolute;
-  right: 0.85rem;
-  bottom: 0.85rem;
-  padding: 0.45rem 0.6rem;
-  background: rgba(32, 35, 31, 0.84);
+  width: 61%;
+  height: 77%;
+  border: 1px solid #a5b18e;
+  border-radius: 50%;
+  transform: rotate(43deg);
+}
+
+.art-orbit-two {
+  width: 47%;
+  height: 82%;
+  border-color: #bac4aa;
+  transform: rotate(-38deg);
+}
+
+.art-note {
+  z-index: 1;
+  display: grid;
+  width: 36%;
+  aspect-ratio: 1;
+  place-content: center;
+  border-radius: 50%;
+  background: var(--dark-green);
   color: white;
   font-family: var(--mono);
+  font-size: clamp(0.62rem, 1.2vw, 0.78rem);
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-align: center;
+  transform: rotate(-9deg);
+}
+
+.art-spark {
+  position: absolute;
+  z-index: 1;
+  color: #5d772f;
+  font-size: 1.5rem;
+}
+
+.art-spark-one {
+  top: 23%;
+  left: 19%;
+}
+
+.art-spark-two {
+  right: 22%;
+  bottom: 24%;
+}
+
+.art-caption {
+  position: absolute;
+  right: 13%;
+  bottom: 15%;
+  color: #626b57;
+  font-family: var(--mono);
   font-size: 0.6rem;
-  letter-spacing: 0.03em;
+  transform: rotate(-8deg);
 }
 
 .hero-index {
@@ -659,7 +709,7 @@ p {
     font-size: clamp(3rem, 8vw, 4.4rem);
   }
 
-  .hero-photo {
+  .hero-art {
     width: 100%;
   }
 
@@ -709,7 +759,7 @@ p {
     font-size: clamp(3.25rem, 14vw, 4.5rem);
   }
 
-  .hero-photo {
+  .hero-art {
     width: min(76%, 290px);
     justify-self: center;
   }
